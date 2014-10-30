@@ -2,6 +2,8 @@
 
 gphoto2
 
+TODO: add system checks to kill processes per environment
+
 */
 
 var spawn = require('child_process').spawn
@@ -41,7 +43,7 @@ Gphoto2.prototype.liveview = function(cb){
 	    }
 
 	    if(!videoStream.connected){
-
+    //if mac osx
 		var killAll = exec('killall PTPCamera',function (error, stdout, stderr) {
 			 if(error) console.log(error)
 			 if(stdout) console.log(stdout)
